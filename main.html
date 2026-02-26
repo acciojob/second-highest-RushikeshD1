@@ -20,7 +20,7 @@
 				if (arr[i] > max){					
 					secondMax = max;
 					max = arr[i];
-				}else if(arr[i] > secondMax && secondMax < max){
+				}else if(arr[i] < max && arr[i] > secondMax){
 					secondMax = arr[i];
 				}
 			}
@@ -30,7 +30,7 @@
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+			// var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
